@@ -16,6 +16,9 @@
 |视频编码技术原理||
 
 
+[H264编码原理]()
+
+
 ffmpeg -re -i  bangbangbang.mp4 -vcodec libx264 -acodec aac -f flv rtmp://localhost:1935/rtmplive/home
 
 

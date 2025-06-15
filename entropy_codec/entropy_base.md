@@ -1,0 +1,126 @@
+
+
+
+# 视频编码中熵编码之熵及熵编码基本原理
+
+
+@[TOC](视频编码中熵编码之熵及熵编码基本原理)
+
+</font>
+
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+
+
+
+
+
+
+ 1、预测编码 
+
+  2、变换编码
+
+ 3、量化编码
+ 
+ 4、熵编码
+
+   [①、视频编码中熵编码之熵及熵编码基本原理](https://chensongpoixs.github.io/cvideo_codec/entropy_codec/entropy_base.html)
+
+  [②、视频编码中熵编码之"Z"字扫描原理(变换DCT系数和小波变换系统分布特性和统计特性)](https://chensongpoixs.github.io/cvideo_codec/)
+
+  [③、视频编码中熵编码之基于上下文的变长编码（Buffman霍夫曼编码和指数哥伦布）](https://chensongpoixs.github.io/cvideo_codec/)
+
+  [④、视频编码中熵编码之基于上下文的算术编码](https://chensongpoixs.github.io/cvideo_codec/)
+
+  [⑤、视频编码中熵编码之位平面编码](https://chensongpoixs.github.io/cvideo_codec/)
+
+  [⑥、视频编码中熵编码之零数编码](https://chensongpoixs.github.io/cvideo_codec/)
+
+  [⑦、视频编码中熵编码之游程编码](https://chensongpoixs.github.io/cvideo_codec/)
+
+ 5、 环路滤波
+
+![视频编码流程图](https://i-blog.csdnimg.cn/direct/a6d61f10a02d4076b4a372734585de3a.jpeg#pic_center)
+
+# 前言
+ 
+ 视频编码中熵编码的目标是去除信源符号在信息表达上的表示冗余，也称为信息熵冗余或者编码冗余。 熵编码技术是视频编码系统中的基础性关键技术之一。
+ 
+
+## 一、信息量的概念
+
+信息量： 表示该符号所需要的位数
+
+   1. 考虑用‘0’和‘1’组成的二进制数字
+   
+   2. 为含有n个符号的某条信息的编码
+   3. <font color='red'> 假设符号 ${A_j}$  在整条信息中重要出现的概率为 ${P_j}$ ，则该符号的信息量定义为${E_n = log_2(P_j)}$ </font>
+   
+   <font color='red'> 信息量表示为以2为底数的对数是正值</font>
+
+
+举例说明：
+
+列一 ： 输入信源字符串：  aabbaccbac
+
+a、b、c出现的概率分别为0.5，0.3和0.2， 他们的信息量分别为
+
+${E_a = - log_2(0.5) = 1 }$
+
+${E_b = -log_2(0.3) = 1.737}$
+
+${E_c = -log2(0.2) = 2.322}$
+
+
+- 总信息量也即表达整个字符串需要的位数：
+
+${E = E_a * 5 + E_b * 3 + E_c * 2 ≈ 14.855位}$
+
+列二： 输入信源字符串：  aabbaccbac  => 如果使用二进制等长编码需要多少位？
+
+解： 字符串有3个不同的字符串，又因为2位二进制数能表示4个不同的字符，所以对每个字符用二位二进制数表示 
+
+列如：
+
+|符号|a|b|c|
+|:---:|:---:|:---:|:---:|
+|等长编码|00|01|10|
+
+
+## 二、熵编码的概念
+
+数据压缩的基石是 香农信息论的信源编码（Shannon）第一定律（失真信源定律）
+
+
+## 三、平均码长概念
+
+如果对字符${A_i}$ 的编码长度为 ${L_j}$, 则信号${L}$的平均码长为
+ 
+$$L_{avg}=   \sum_{j=1}^{M} P_j * L_j  $$
+
+设M: 信号中所出现不同字符的个数
+
+## 四、无失真编码定理
+
+1. 平均码长 ${L_{avg} >> H_(x)}$ 有冗余，不是最佳的
+2. 平均码长 ${L_{avg} <  H_(x)}$  不可能出现
+3. 平均码长 ${L_{avg} ≈ H_(x)}$  最佳的编码
+
+<font color='red'>熵值是平均码长的下限</font>
+
+编码的基本思想就是使用较少的比特数表示出现概率较大的码源符号， 使用较多的比特数表示出现概率小的码源的符号
+
+最常用算法 : <font color='red'> 霍夫曼编码（Buffman）
+
+
+
+## 五、 编码效率的定义
+
+熵 ${H(x)}$ 除以平均码长 ${L_{avg}}$ 即表示编码效率
+
+$$H(x) = -   \sum_{j=1}^{M} P_j * log_2(P_j)$$
+
+
+
+$$n = H(x)/L_{avg}$$
+# 总结
+[数字视频编码技术原理地址：https://chensongpoixs.github.io/cvideo_codec/](https://chensongpoixs.github.io/cvideo_codec/)

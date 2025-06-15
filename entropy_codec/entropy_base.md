@@ -10,37 +10,6 @@
 
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
-
-
-
-
-
- 1、预测编码 
-
-  2、变换编码
-
- 3、量化编码
- 
- 4、熵编码
-
-   [①、视频编码中熵编码之熵及熵编码基本原理](https://chensongpoixs.github.io/cvideo_codec/entropy_codec/entropy_base.html)
-
-  [②、视频编码中熵编码之"Z"字扫描原理(变换DCT系数和小波变换系统分布特性和统计特性)](https://chensongpoixs.github.io/cvideo_codec/)
-
-  [③、视频编码中熵编码之基于上下文的变长编码（Buffman霍夫曼编码和指数哥伦布）](https://chensongpoixs.github.io/cvideo_codec/)
-
-  [④、视频编码中熵编码之基于上下文的算术编码](https://chensongpoixs.github.io/cvideo_codec/)
-
-  [⑤、视频编码中熵编码之位平面编码](https://chensongpoixs.github.io/cvideo_codec/)
-
-  [⑥、视频编码中熵编码之零数编码](https://chensongpoixs.github.io/cvideo_codec/)
-
-  [⑦、视频编码中熵编码之游程编码](https://chensongpoixs.github.io/cvideo_codec/)
-
- 5、 环路滤波
-
-![视频编码流程图](https://i-blog.csdnimg.cn/direct/a6d61f10a02d4076b4a372734585de3a.jpeg#pic_center)
-
 # 前言
  
  视频编码中熵编码的目标是去除信源符号在信息表达上的表示冗余，也称为信息熵冗余或者编码冗余。 熵编码技术是视频编码系统中的基础性关键技术之一。

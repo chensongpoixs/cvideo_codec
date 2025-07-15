@@ -9,11 +9,33 @@
 |视频编码基础概念|[主流视频编码压缩技术基本概念（一）](https://github.com/chensongpoixs/cvideo_codec/blob/master/post/%E4%B8%BB%E6%B5%81%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81%E5%8E%8B%E7%BC%A9%E6%8A%80%E6%9C%AF%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5(%E4%B8%80).md)|
 |视频编码基础概念|[主流视频编码压缩技术基本概念（二）](https://github.com/chensongpoixs/cvideo_codec/blob/master/post/%E4%B8%BB%E6%B5%81%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81%E5%8E%8B%E7%BC%A9%E6%8A%80%E6%9C%AF%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5(%E4%BA%8C).md)|
 
-## 二、 视频编码技术原理
+
+## 二、 数字信号处理
+
+《数字信号处理》 
+
+1. 离散傅里叶变换(DFT)
+
+2. 快速傅里叶变换(FFT)
+
+3. IIR数字滤波器设计
+
+4. FIR数字滤波器设计
+
+5. 多速率信号处理基础
+
+6. 小波分析基础
+
+
+
+## 三、 视频编码技术原理
 
 ### 1、预测编码 
 
 ### 2、变换编码
+
+[①、视频编码中变换编码之DCT变换原理]()
+
 
 ### 3、量化编码
 
@@ -22,7 +44,7 @@
 
 [①、视频编码中熵编码之熵及熵编码基本原理](entropy_codec/entropy_base.md)
 
-[②、视频编码中熵编码之"Z"字扫描原理(变换DCT系数和小波变换系统分布特性和统计特性)]()
+[②、视频编码中熵编码之"Z"字扫描原理(变换DCT系数和小波变换系统分布特性和统计特性)](entropy_codec/huffman_encoder.md)
 
 [③、视频编码中熵编码之基于上下文的变长编码（Buffman霍夫曼编码和指数哥伦布）]()
 
@@ -46,7 +68,7 @@ ffmpeg -re -i  bangbangbang.mp4 -vcodec libx264 -acodec aac -f flv rtmp://localh
 
 
 
-## 三、基础教程 
+## 四、基础教程 
 
 第一章 数字视频
 
